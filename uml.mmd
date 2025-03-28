@@ -1,0 +1,74 @@
+classDiagram
+  %% Person interface
+  class Person  {
+    +getFirstName() String
+    +getLastName() String
+    +getDateOfBirth() String
+    +setFirstName(firstName: String) void
+    +setLastName(lastName: String) void
+  }
+  <<interface>> Person
+
+  %% Player class implementing Person
+  class Player {
+    -firstName: String
+    -lastName: String
+    -dateOfBirth: String
+    -preferredPosition: Position
+    -skill: int
+    -jerseyNumber: int
+    +Player(firstName: String, lastName: String, dateOfBirth: String, preferredPosition: Position, skill: int)
+    +getFirstName() String
+    +getLastName() String
+    +getDateOfBirth() String
+    +setFirstName(firstName: String) void
+    +setLastName(lastName: String) void
+    +getPreferredPosition() Position
+    +setPreferredPosition(preferredPosition: Position) void
+    +getSkill() int
+    +setSkill(skill: int) void
+    +getJerseyNumber() int
+    +setJerseyNumber(jerseyNumber: int) void
+    +toString() String
+  }
+  Player ..|> Person
+  Player --o SimpleTeam
+
+  %% Position enum
+  class Position {
+    GOALIE
+    DEFENDER
+    MIDFIELDER
+    FORWARD
+  }
+  Player *-- Position
+
+  %% Team interface
+  class Team {
+    +addPlayer(player: Player) void
+    +removeWeakestPlayer() void
+    +assignJerseyNumbers() void
+    +chooseStartingLineup(startingLineup: List) void
+    +getAllPlayers() List
+    +getStartingLineup() List
+    +replacePlayer(activePlayer: Player, benchPlayer: Player) void
+  }
+  <<interface>> Team
+
+  %% SimpleTeam class implementing Team
+  class SimpleTeam {
+    -players: List
+    -activePlayers: List
+    -benchPlayers: List
+    -startingLineup: List
+    +SimpleTeam()
+    +SimpleTeam(players: List)
+    +addPlayer(player: Player) void
+    +removeWeakestPlayer() void
+    +assignJerseyNumbers() void
+    +chooseStartingLineup(startingLineup: List) void
+    +getAllPlayers() List
+    +getStartingLineup() List
+    +replacePlayer(activePlayer: Player, benchPlayer: Player) void
+  }
+  SimpleTeam ..|> Team
