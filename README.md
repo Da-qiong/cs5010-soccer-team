@@ -11,7 +11,7 @@ A simple yet extensible Java-based soccer team management system that simulates 
 - Sort and manage starting lineups based on position and player name
 - Support player substitutions between active and bench players
 - JUnit test cases included for robustness
-- 
+
 ##  Project Structure
 
 ```
