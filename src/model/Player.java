@@ -8,7 +8,7 @@ import java.time.LocalDate;
 public class Player implements Person {
     private String firstName;
     private String lastName;
-    private LocalDate dateOfBirth;
+    private final LocalDate dateOfBirth;
     private Position preferredPosition;
     private int skill;         // Skill level from 1 (lowest) to 5 (highest)
     private int jerseyNumber;  // Jersey number, assigned when the team is created
@@ -21,9 +21,13 @@ public class Player implements Person {
      * @param dateOfBirth       the player's date of birth
      * @param preferredPosition the player's preferred position
      * @param skill             the player's skill level (1-5)
+     * @throws IllegalArgumentException if skill is not between 1 and 5
      */
     public Player(String firstName, String lastName, LocalDate dateOfBirth,
-        Position preferredPosition, int skill) {
+                  Position preferredPosition, int skill) {
+        if (skill < 1 || skill > 5) {
+            throw new IllegalArgumentException("Skill level must be between 1 and 5.");
+        }
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
@@ -31,6 +35,7 @@ public class Player implements Person {
         this.skill = skill;
         this.jerseyNumber = -1; // Not yet assigned
     }
+
 
     @Override
     public String getFirstName() {
