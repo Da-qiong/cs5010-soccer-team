@@ -23,7 +23,13 @@ public class PlayerTest {
     assertEquals(5, player.getSkill());
     // Jersey number is not assigned yet, so it should be -1.
     assertEquals(-1, player.getJerseyNumber());
-  }
+
+    try {
+      Player errorPlayer = new Player("Error", "Test", dob, Position.GOALIE, 8);
+    } catch (Exception e) {
+      // This will be exit only an IllegalArgumentException was throw.
+    }
+}
 
   /**
    * Tests the setter methods for the Player object.
