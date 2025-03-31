@@ -118,6 +118,6 @@ public class Player implements Person {
 
     @Override
     public String toString() {
-        return firstName + " " + lastName + " (Jersey: " + jerseyNumber + ")";
+        return firstName + " " + lastName + " (Jersey: " + jerseyNumber + ", Skill: " + skill + ")";
     }
 }
