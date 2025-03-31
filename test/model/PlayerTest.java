@@ -58,7 +58,7 @@ public class PlayerTest {
     LocalDate dob = LocalDate.of(2015, 5, 20);
     Player player = new Player("Alice", "Smith", dob, Position.GOALIE, 5);
     player.setJerseyNumber(7);
-    String expected = "Alice Smith (Jersey: 7)";
+    String expected = "Alice Smith (Jersey: 7, Skill: 5)";
     assertEquals(expected, player.toString());
   }
 }
