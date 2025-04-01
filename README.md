@@ -24,19 +24,11 @@ A simple yet extensible Java-based soccer team management system that simulates 
 │
 ├───src
 │   └───model
-│           ActiveTeam$1.class
-│           ActiveTeam$2.class
-│           ActiveTeam.class
 │           ActiveTeam.java
-│           Main.class
 │           Main.java
-│           Person.class
 │           Person.java
-│           Player.class
 │           Player.java
-│           Position.class
 │           Position.java
-│           Team.class
 │           Team.java
 │
 └───test
