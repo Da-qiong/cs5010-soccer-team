@@ -89,14 +89,29 @@ public class Player implements Person {
         return skill;
     }
 
+//    /**
+//     * Sets the skill level of the player.
+//     *
+//     * @param skill the new skill level
+//     */
+//    public void setSkill(int skill) {
+//        this.skill = skill;
+//    }
+
     /**
      * Sets the skill level of the player.
      *
      * @param skill the new skill level
+     * @throws IllegalArgumentException if skill is not between 1 and 5
      */
     public void setSkill(int skill) {
+        if (skill < 1 || skill > 5) {
+            throw new IllegalArgumentException("Skill level must be between 1 and 5.");
+        }
         this.skill = skill;
     }
+
+
 
     /**
      * Returns the jersey number of the player.

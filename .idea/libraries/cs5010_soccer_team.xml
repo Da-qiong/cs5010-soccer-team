@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="cs5010-soccer-team">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/res/cs5010-soccer-team.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
