@@ -83,4 +83,4 @@ Player7 LastName7 (Jersey: 12, Skill: 3)
 
 > *Lingsong Qin*  
 > *Yibo Wang*  
-> *Zuobo Yang*  
+> *Boyang Zuo*  
